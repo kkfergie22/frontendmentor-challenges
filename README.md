@@ -26,9 +26,7 @@ Feel free to inspect the code and explore how I approached each challenge. If yo
 
 Here is a list of challenges I have completed and their respective directory names:
 
-1. Challenge Name 1 - [challenge-directory-1](link-to-directory-1)
-2. Challenge Name 2 - [challenge-directory-2](link-to-directory-2)
-3. Challenge Name 3 - [challenge-directory-3](link-to-directory-3)
+1. Results summary component - [results-summary-component](https://github.com/kkfergie22/frontendmentor-challenges/tree/main/results-summary-component)
 
 I will continue adding more challenges to this repository as I complete them.
 
