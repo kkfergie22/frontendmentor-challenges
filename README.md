@@ -13,7 +13,8 @@ The repository is organized into different directories, each representing a spec
 - **index.html**: The HTML file that represents the structure of the web page.
 - **style.css**: The CSS file containing the styles for the web page.
 - **script.js**: The JavaScript file containing any interactive functionality for the web page.
-- **images/**: A directory containing any necessary image assets for the challenge.
+- **assets/**: A directory containing any necessary assets for the challenge.
+- **design/**: A directory containing any necessary design images for the challenge.
 - **README.md**: A README file specific to the challenge, providing details, instructions, and any additional notes.
 
 ## How to Use
