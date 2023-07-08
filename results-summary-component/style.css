@@ -52,7 +52,6 @@ h2 {
 }
 .left h2 {
   color: hsl(241, 100%, 89%);
-  /* margin-bottom: 30px; */
 }
 .score-circle {
   display: flex;
@@ -107,7 +106,12 @@ h2 {
   margin-bottom: 15px;
   border-radius: 10px;
 }
-
+.image-text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 .attribute {
   font-weight: 500;
   font-size: 16px;
@@ -150,4 +154,35 @@ li:last-child {
   margin-top: 25px;
   background: hsl(224, 30%, 27%);
   border-radius: 30px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inner-container {
+    flex-direction: column;
+  }
+  .left {
+    padding: 15px;
+    margin-top: 200px;
+    border-radius: 0 0 30px 30px;
+  }
+  .score-circle {
+    width: 120px;
+    height: 120px;
+  }
+  .big-score {
+    font-size: 36px;
+  }
+  .summary-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
