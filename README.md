@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Mentor Challenge Solutions
 
-## Getting Started
+Welcome to my repository containing my solutions to challenges from Frontend Mentor! This repository showcases my frontend development skills and demonstrates my ability to create beautiful and responsive web designs.
 
-First, run the development server:
+## About Frontend Mentor
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[Frontend Mentor](https://www.frontendmentor.io/) is a platform that provides real-world coding challenges for frontend developers. These challenges cover a wide range of skills and are designed to improve your coding abilities. Each challenge comes with a detailed design and a set of user stories to implement.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Repository Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The repository is organized into different directories, each representing a specific challenge from Frontend Mentor. Within each challenge directory, you will find the following files:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **index.html**: The HTML file that represents the structure of the web page.
+- **style.css**: The CSS file containing the styles for the web page.
+- **script.js**: The JavaScript file containing any interactive functionality for the web page.
+- **assets/**: A directory containing any necessary assets for the challenge.
+- **design/**: A directory containing any necessary design images for the challenge.
+- **README.md**: A README file specific to the challenge, providing details, instructions, and any additional notes.
 
-## Learn More
+## How to Use
 
-To learn more about Next.js, take a look at the following resources:
+To explore and run the solutions, you can simply navigate to the specific challenge directory of interest. Within each challenge directory, open the `index.html` file in your web browser, and you will see the implemented design. You can interact with the web page as per the provided user stories.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Feel free to inspect the code and explore how I approached each challenge. If you have any questions or suggestions, please feel free to reach out to me.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Challenges Completed
 
-## Deploy on Vercel
+Here is a list of challenges I have completed and their respective directory names:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Results summary component - [results-summary-component](https://github.com/kkfergie22/frontendmentor-challenges/tree/main/results-summary-component)
+2. QR code component - [qr-code-component](https://github.com/kkfergie22/frontendmentor-challenges/tree/main/qr-code-component)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+I will continue adding more challenges to this repository as I complete them.
+
+## Acknowledgments
+
+I would like to express my gratitude to Frontend Mentor for providing these challenges and allowing developers to showcase their skills. Their platform has been instrumental in improving my frontend development abilities.
+
+## License
+
+This repository is licensed under the [MIT License](LICENSE.md). Feel free to use the code for learning purposes, but please respect the original authorship by providing attribution.
