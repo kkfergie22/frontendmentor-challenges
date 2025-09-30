@@ -28,7 +28,7 @@ const socialLinks = [
 
 function MobileNav() {
   return (
-    <nav className="absolute top-full left-0 w-full bg-white dark:bg-black shadow-md md:hidden flex flex-col items-center py-4 space-y-4 z-20">
+    <nav className="absolute top-full left-0 w-full bg-white dark:bg-black shadow-md flex flex-col items-center py-4 space-y-4 z-20">
       <ul className="flex flex-col gap-4 items-center">
         {socialLinks.map(({ name, url, icon: Icon }) => (
           <li key={name} className="w-full flex justify-center">
@@ -75,7 +75,7 @@ export default function Home() {
           <ModeToggle />
         </nav>
         {/* Mobile Nav */}
-        <div className="flex gap-4 items-center justify-center">
+        <div className="flex gap-4 items-center justify-center md:hidden">
           <ModeToggle />
           <button
             className="md:hidden p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-800 transition"
@@ -85,8 +85,8 @@ export default function Home() {
             {isOpen ? <X size={28} /> : <List size={28} />}
           </button>
         </div>
-        {isOpen && <MobileNav />}
       </header>
+      {isOpen && <MobileNav />}
       <main className="pt-24">
         <h1 className="text-center text-lg md:text-3xl font-heading my-8">
           Every card here represents a Frontend Mentor challenge I’ve tackled —
@@ -96,7 +96,6 @@ export default function Home() {
         <div className="p-4 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 w-full gap-4">
             {typedChallenges.map((c, i) => {
-              console.log(`Challenges in the Home page from data.json ${c}`);
               return (
                 <React.Fragment key={i}>
                   <ChallengeCard
