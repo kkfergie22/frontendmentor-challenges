@@ -27,7 +27,7 @@ export default function ChallengeCard({
 }: Challenge) {
   console.log(`tags in the challenge card component ${tags}`);
   return (
-    <Card className="shadow-lg hover:shadow-xl overflow-hidden transition-shadow duration-300 ease-in-out">
+    <Card className="shadow-lg hover:shadow-xl overflow-hidden transition-shadow duration-300 ease-in-out pt-0">
       <CardHeader className="p-0 relative">
         <div className="h-48 md:h-56 relative overflow-hidden w-full">
           <Image

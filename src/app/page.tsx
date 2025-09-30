@@ -4,7 +4,7 @@ import challenges from '../data.json';
 import { ModeToggle } from '@/components/mode-toggle';
 import ChallengeCard, { type Challenge } from '@/components/challenge-card';
 import React, { useState } from 'react';
-import { Discord, Github, Linkedin, List, X } from 'react-bootstrap-icons';
+import { Github, Linkedin, List, X } from 'react-bootstrap-icons';
 
 const typedChallenges: Challenge[] = challenges;
 
@@ -18,11 +18,6 @@ const socialLinks = [
     name: 'linkedIn',
     url: 'https://linkedin.com/in/christian-koranteng',
     icon: Linkedin,
-  },
-  {
-    name: 'Discord',
-    url: 'mailto:kkfergie22@example.com',
-    icon: Discord,
   },
 ];
 
@@ -87,7 +82,7 @@ export default function Home() {
         </div>
       </header>
       {isOpen && <MobileNav />}
-      <main className="pt-24">
+      <main className="pt-24 bg-gray-100/50 dark:bg-black/50">
         <h1 className="text-center text-lg md:text-3xl font-heading my-8">
           Every card here represents a Frontend Mentor challenge I’ve tackled —
           proof of my frontend skills and love for building clean, responsive
