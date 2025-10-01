@@ -1,6 +1,7 @@
 // storage-adapter-import-placeholder
 import { sqliteAdapter } from '@payloadcms/db-sqlite';
 import { postgresAdapter } from '@payloadcms/db-postgres';
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob';
 import { payloadCloudPlugin } from '@payloadcms/payload-cloud';
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
 import path from 'path';
@@ -35,6 +36,24 @@ const selectDB = () => {
   });
 };
 
+// const selectBlobStorage = () => {
+//   if (process.env.NODE_ENV === 'production') {
+//     console.log(
+//       'Connecting to production blob storage for media (vercel blob storage)'
+//     );
+//     return vercelBlobStorage({
+//       enabled: true,
+//       collections: {
+//         media: true,
+//       },
+//       token: process.env.BLOB_READ_WRITE_TOKEN || '',
+//     });
+//   }
+
+//   console.log('Connecting to dev blob storage for media (null)');
+//   return [];
+// };
+
 export default buildConfig({
   admin: {
     user: Users.slug,
@@ -51,7 +70,14 @@ export default buildConfig({
   db: selectDB(),
   sharp,
   plugins: [
-    payloadCloudPlugin(),
-    // storage-adapter-placeholder
+    process.env.NODE_ENV === 'production'
+      ? vercelBlobStorage({
+          enabled: true,
+          collections: {
+            media: true,
+          },
+          token: process.env.BLOB_READ_WRITE_TOKEN || '',
+        })
+      : payloadCloudPlugin(),
   ],
 });
