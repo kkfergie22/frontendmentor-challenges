@@ -5,9 +5,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "payload migrate && next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "migrate": "payload migrate"
   },
   "dependencies": {
     "@libsql/client": "0.14.0",
