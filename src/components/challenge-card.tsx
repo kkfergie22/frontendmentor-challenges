@@ -9,62 +9,63 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Challenge } from '@/payload-types';
 
-export interface Challenge {
-  title: string;
-  desc: string;
-  tags?: string[];
-  link: string;
-  imgPath: string;
-}
-
-export default function ChallengeCard({
+export function ChallengeCard({
   title,
-  desc,
+  description,
   tags,
-  link,
-  imgPath,
+  url,
+  image,
+  slug,
 }: Challenge) {
-  console.log(`tags in the challenge card component ${tags}`);
-  return (
-    <Card className="shadow-lg hover:shadow-xl overflow-hidden transition-shadow duration-300 ease-in-out pt-0">
-      <CardHeader className="p-0 relative">
-        <div className="h-48 md:h-56 relative overflow-hidden w-full">
-          <Image
-            src={imgPath}
-            alt={title}
-            fill
-            className="transition-transform object-cover duration-500 ease-in-out hover:scale-105"
-          />
-        </div>
+  const validImage = image && typeof image === 'object' ? image : null;
 
-        {tags && tags.length > 0 && (
-          <div className="absolute top-2 left-2 flex gap-2">
-            {tags.map((t) => {
-              return (
-                <Badge
-                  key={t}
-                  className="bg-black/60 text-white text-xs uppercase font-bold"
-                >
-                  {t}
-                </Badge>
-              );
-            })}
-          </div>
+  return (
+    <Card className="overflow-hidden duration-300 ease-in-out pt-0 shadow-md hover:shadow-lg transition bg-white dark:bg-[#0e0e0e] border border-gray-200/50 dark:border-none">
+      <CardHeader className="p-0 relative">
+        {validImage && validImage.url && validImage.url && (
+          <>
+            <div className="h-48 md:h-56 relative overflow-hidden w-full">
+              <Image
+                src={validImage.url}
+                alt={validImage.alt || title}
+                fill
+                className="transition-transform object-cover duration-500 ease-in-out hover:scale-105"
+              />
+            </div>
+
+            {tags && tags.length > 0 && (
+              <div className="absolute top-2 left-2 flex gap-2">
+                {tags.map((t) => {
+                  return (
+                    <Badge
+                      key={t.id}
+                      className="bg-gray-100 dark:bg-gray-700 dark:text-gray-100 text-gray-800 text-xs uppercase font-bold border border-gray-500/50"
+                    >
+                      {t.tag}
+                    </Badge>
+                  );
+                })}
+              </div>
+            )}
+          </>
         )}
       </CardHeader>
       <CardContent className="space-y-2">
-        <CardTitle className="font-bold font-heading text-2xl capitalize">
+        <CardTitle className="font-bold font-heading text-2xl capitalize dark:text-[#fefefe] text-gray-700">
           {title}
         </CardTitle>
-        <p className="text-md leading-relaxed font-sans line-clamp-2">{desc}</p>
+        <p className="text-md leading-relaxed font-sans line-clamp-2 dark:text-[#fefefe] text-gray-600">
+          {description}
+        </p>
       </CardContent>
       <CardFooter>
         <Button
           asChild
-          className="bg-amber-300 w-full font-sans capitalize hover:text-lg hover:scale-105 hover:bg-amber-400 transition-transform ease-in-out duration-300 hover:cursor-pointer hover:font-semibold"
+          className="bg-amber-400 w-full font-sans capitalize hover:text-lg hover:scale-105 hover:bg-amber-500 text-[#111827] transition-transform ease-in-out duration-300 hover:cursor-pointer hover:font-semibold font-bold"
         >
-          <Link href={link}>View</Link>
+          <Link href={url || `challenges/${slug}`}>View</Link>
         </Button>
       </CardFooter>
     </Card>
