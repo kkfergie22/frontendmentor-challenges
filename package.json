@@ -23,7 +23,7 @@
   },
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "payload migrate && next build --turbopack",
+    "build": "pnpm install --include-optional && payload migrate && next build --turbopack",
     "start": "next start",
     "lint": "eslint",
     "migrate": "payload migrate"
