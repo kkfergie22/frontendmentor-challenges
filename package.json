@@ -3,6 +3,18 @@
   "version": "0.1.0",
   "type": "module",
   "private": true,
+  "pnpm": {
+    "supportedArchitectures": {
+      "os": [
+        "darwin",
+        "linux"
+      ],
+      "cpu": [
+        "x64",
+        "arm64"
+      ]
+    }
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "payload migrate && next build --turbopack",
