@@ -22,7 +22,7 @@ export function ChallengeCard({
   const validImage = image && typeof image === 'object' ? image : null;
 
   return (
-    <Card className="overflow-hidden duration-300 ease-in-out pt-0 shadow-md hover:shadow-lg transition bg-white dark:bg-[#0e0e0e] border border-gray-200/50 dark:border-none">
+    <Card className="overflow-hidden duration-300 ease-in-out pt-0 shadow-md hover:shadow-lg transition bg-white dark:bg-[#0e0e0e] border border-gray-200/50 dark:border-none h-full flex flex-col">
       <CardHeader className="p-0 relative">
         {validImage && validImage.url && validImage.url && (
           <>
@@ -52,11 +52,11 @@ export function ChallengeCard({
           </>
         )}
       </CardHeader>
-      <CardContent className="space-y-2">
-        <CardTitle className="font-bold font-heading text-2xl capitalize dark:text-[#fefefe] text-gray-700">
+      <CardContent className="space-y-2 flex-grow">
+        <CardTitle className="font-bold font-heading text-xl min-h-[2rem] capitalize dark:text-[#fefefe] text-gray-700">
           {title}
         </CardTitle>
-        <p className="text-md leading-relaxed font-sans line-clamp-2 dark:text-[#fefefe] text-gray-600">
+        <p className="text-md leading-relaxed font-sans line-clamp-2 min-h-[3rem] dark:text-[#fefefe] text-gray-600">
           {description}
         </p>
       </CardContent>

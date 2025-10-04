@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
-import { Button } from '../ui/button';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -38,7 +37,7 @@ function SocialLinksComponentChallenge() {
         </div>
         <div className="flexflex-col space-y-8">
           <p className="text-sm font-[400]">
-            "Frontend-end developer and avid reader"
+            &quot;Frontend-end developer and avid reader&quot;
           </p>
           <ul className="flex flex-col space-y-2">
             {data.map((s, i) => {
