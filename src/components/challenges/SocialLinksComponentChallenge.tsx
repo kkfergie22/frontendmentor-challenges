@@ -21,7 +21,7 @@ function SocialLinksComponentChallenge() {
     <div
       className={`${inter.className} h-screen w-full flex items-center justify-center bg-[hsl(0,0%,8%)] text-sm`}
     >
-      <div className="p-8 bg-[hsl(0,0%,12%)] rounded-lg">
+      <div className="p-4 bg-[hsl(0,0%,12%)] rounded-lg max-w-[320px]">
         <div className="flex items-center flex-col space-y-4">
           <Image
             src="/assets/avatar-jessica.jpeg"
@@ -36,7 +36,7 @@ function SocialLinksComponentChallenge() {
           </p>
         </div>
         <div className="flexflex-col space-y-8">
-          <p className="text-sm font-[400]">
+          <p className="text-sm font-[400] text-[hsl(0,0%,100%)]">
             &quot;Frontend-end developer and avid reader&quot;
           </p>
           <ul className="flex flex-col space-y-2">
